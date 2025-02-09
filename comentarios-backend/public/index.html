@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección de Comentarios</title>
+    <link rel="stylesheet" href="comments.css">
+</head>
+
+<body>
+    <div class="comment-section">
+        <h2>Deja tu comentario</h2>
+        <form id="commentForm">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="comment">Comentario:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Calificación:</label>
+                <div class="star-rating">
+                    <span data-value="1">&#9733;</span>
+                    <span data-value="2">&#9733;</span>
+                    <span data-value="3">&#9733;</span>
+                    <span data-value="4">&#9733;</span>
+                    <span data-value="5">&#9733;</span>
+                </div>
+                <input type="hidden" id="rating" name="rating" value="0">
+            </div>
+            <button type="submit">Enviar Comentario</button>
+        </form>
+        <div id="commentsList" class="comments-list">
+            
+        </div>
+    </div>
+
+    <script src="comments.js"></script>
+</body>
+
+</html>

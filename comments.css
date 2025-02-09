@@ -1,0 +1,234 @@
+#Comments {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 1rem;
+    padding: 1.25rem 1rem 1rem;
+    background: var(--secondary-bg-color);
+    margin-top: 4rem;
+    color: #fff;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 0.4rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+    font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-group {
+    margin-top: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 16px;
+    word-wrap: break-word;
+    background: var(--secondary-bg-color);
+    color: var(--primary-color);
+    font-family: "League Spartan", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rating {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+}
+
+.rating span {
+    color: var(--primary-color);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.rating span.active,
+.rating span:hover {
+    color: gold;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background: var(--secondary-bg-color);
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    color: var(--primary-color);
+    font-family: "League Spartan", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 600px) {
+    #Comments {
+        padding: 1rem 0.5rem;
+        margin-top: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .rating span {
+        font-size: 1.5rem;
+    }
+
+    .carousel {
+        width: 95%;
+    }
+
+    .carousel-item {
+        padding: 10px;
+    }
+
+    .carousel-control {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    #Comments {
+        padding: 1.25rem 0.75rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 15px;
+        padding: 9px;
+    }
+
+    .rating span {
+        font-size: 1.75rem;
+    }
+
+    .carousel {
+        width: 90%;
+    }
+
+    .carousel-item {
+        padding: 15px;
+    }
+
+    .carousel-control {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 901px) {
+    #Comments {
+        padding: 1.5rem 1rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+        letter-spacing: 0.4rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .rating span {
+        font-size: 2rem;
+    }
+
+    .carousel {
+        width: 80%;
+    }
+
+    .carousel-item {
+        padding: 20px;
+    }
+
+    .carousel-control {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}

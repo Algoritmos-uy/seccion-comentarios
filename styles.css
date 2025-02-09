@@ -1,0 +1,105 @@
+#Comments {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1rem 2rem;
+    background: var(--secondary-bg-color);
+    margin-top: -5.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 500 !important;
+    text-transform: none;
+    letter-spacing: 0.4rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+    font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.rating {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+}
+
+.rating span {
+    color: grey;
+    font-size: 2rem;
+}
+
+.rating span.active {
+    color: gold;
+}
+
+.rating span:hover {
+    color: gold;
+    cursor: pointer;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f9f9f9;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}

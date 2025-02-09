@@ -1,0 +1,778 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400&display=swap");
+
+:root,
+:root[data-theme="dark"] {
+  --primary-color: #FFF;
+
+  --primary-bg-color: #111217;
+  --secondary-bg-color: #28292e;
+  --primary-border-color: #28292e;
+  --secondary-border-color: #56575a;
+
+  --title-color: #f0f0f0;
+  --text-color: #9a9a9c;
+  --link-color: #9a9a9c;
+  --icon-color: #c7c8c9;
+}
+
+:root[data-theme="light"] {
+  --primary-color: #0b0b0f;
+
+  --primary-bg-color: #e9e9e9;
+  --secondary-bg-color: #c7c8c9;
+  --primary-border-color: #c7c8c9;
+  --secondary-border-color: #9a9a9c;
+
+  --title-color: #0b0b0f;
+  --text-color: #28292e;
+  --link-color: #28292e;
+  --icon-color: #56575a;
+}
+
+html[data-theme="light"] .brand__logo {
+  filter: invert(1);
+}
+
+html[data-theme="light"] .tecnologias__logo {
+  filter: invert(80%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  list-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary-bg-color) transparent;
+}
+
+body {
+  background: var(--primary-bg-color);
+  font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-bg-color);
+  border-radius: 50rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+i {
+  color: var(--icon-color);
+}
+
+b {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.4rem;
+}
+
+h3 {
+  font-size: 1.55rem;
+  text-align: left;
+}
+
+h4 {
+  color: var(--primary-color);
+  font-weight: 400;
+  font-size: 1.15rem;
+  text-align: left;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "League Spartan", Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  color: var(--title-color);
+  font-weight: 200;
+}
+
+p,
+span,
+li {
+  font-size: 1rem;
+}
+
+p {
+  text-align: justify;
+}
+
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  z-index: 2;
+}
+
+.header__toggle {
+  display: flex;
+  width: fit-content;
+  justify-content: flex-end;
+}
+
+.header__brand .brand__logo {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+#toggleTheme {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: ease-in-out 0.4s;
+}
+
+#reco {
+  background: transparent;
+  border: none;
+  color: var(--link-color);
+  width: fit-content;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+#reco span {
+  background: transparent;
+  border: none;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  width: 100%;
+  background: transparent;
+  border-radius: 3.125rem;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  transition: ease-in-out 0.4s;
+}
+
+.btn span,
+.btn i {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+.btn--primary span {
+  color: var(--primary-color);
+}
+
+.btn--primary {
+  border: 1px solid var(--primary-color);
+}
+
+.btn1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  width: fit-content;
+  background: transparent;
+  border-radius: 3.125rem;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.btn1:hover {
+  transform: scale(1.1);
+  transition: ease-in-out 0.4s;
+}
+
+.btn1 span,
+.btn1 i {
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+
+.btn--primary2 {
+  border: 1px solid var(--primary-color);
+}
+
+.btn--primary2 span {
+  color: var(--primary-color);
+}
+
+.btn--primary3 {
+  border: 1px solid var(--primary-color);
+}
+
+main,
+.projects,
+.about,
+.contact {
+  padding: 2.5rem 1rem;
+}
+
+.btn--primary3 span {
+  color: var(--primary-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main__content1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.main__content2 {
+  margin-bottom: 4rem;
+}
+
+.institucional {
+  width: 90%;
+  height: 90%;
+  aspect-ratio: 16/9;
+}
+
+.main__content2 iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.tecnologias {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1rem 2rem;
+  background: var(--secondary-bg-color);
+  margin-top: -5.5rem;
+}
+
+.tecnologias h2 {
+  font-size: 2.5rem;
+  font-weight: 400 !important;
+  text-transform: none;
+  letter-spacing: normal;
+  text-align: start;
+}
+
+.tecnologias__list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+}
+
+.tecnologias__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 4.8rem;
+  height: 4.8rem;
+  aspect-ratio: 1/1;
+  border: 1px solid var(--secondary-border-color);
+  border-radius: 50rem;
+}
+
+.tecnologias__logo {
+  height: 2.4rem;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#Descargas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+#Cursos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+#Cursos h3 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#Cursos img {
+  width: 90%;
+  margin: 1rem;
+  border-radius: 8px;
+}
+
+.projects__container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.projects__card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card__cover {
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.card__description {
+  color: var(--title-color);
+}
+
+.card__list,
+.about__list {
+  margin-left: 1.25rem;
+}
+
+.card__item,
+.about__item {
+  list-style: disc;
+}
+
+.card__buttons,
+.description__buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.card__buttons .btn {
+  padding: 0.65rem 1.25rem;
+}
+
+.card__buttons .btn span {
+  font-size: 1rem;
+}
+
+.card__body .tecnologias__list {
+  gap: 0.75rem;
+}
+
+.card__body .tecnologias__item {
+  width: 4rem;
+  height: 4rem;
+}
+
+.card__body .tecnologias__logo {
+  height: 2rem;
+}
+
+.projects .btn {
+  width: auto;
+  margin: auto;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about__content1,
+.about__content2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.about__photo {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  border-radius: 50rem;
+  border: 1px solid var(--primary-border-color);
+}
+
+.about__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.about__icons {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.about__icons i {
+  font-size: 1.25rem;
+}
+
+.about__content2 .col1,
+.about__content2 .col2 {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 2rem;
+}
+
+.about__content2 .col1 .row1,
+.about__content2 .col1 .row2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.accordion__header {
+  width: 100%;
+  display: flex;
+  padding: 0.75rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--primary-border-color);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+.accordion__header span {
+  color: var(--title-color);
+}
+
+.accordion__header.start {
+  border-radius: 0.25rem 0.25rem 0rem 0rem;
+}
+
+.accordion__header.end,
+.accordion__item.active .accordion__body.end {
+  border-radius: 0rem 0rem 0.25rem 0.25rem;
+}
+
+.accordion__item.active .accordion__header.end {
+  border-radius: 0;
+}
+
+.accordion__body {
+  display: none;
+  padding: 1.25rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  border: 1px solid var(--primary-border-color);
+}
+
+.accordion__item.active .accordion__header {
+  background: var(--secondary-bg-color);
+}
+
+.accordion__item.active .accordion__body {
+  display: flex;
+}
+
+.accordion__item.active .bi-caret-down-fill {
+  transform: rotate(180deg);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  border-top: 1px solid var(--primary-border-color);
+  border-bottom: 1px solid var(--primary-border-color);
+}
+
+.contact p {
+  text-align: center;
+}
+
+.contact .btn {
+  width: auto;
+}
+
+.contact .email {
+  text-transform: lowercase;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  padding: 0.75rem;
+
+  margin-bottom: 5rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 0.5rem;
+}
+
+footer p {
+  font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+footer p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: cursive;
+  color: var(--border-color);
+}
+
+/* Responsividad */
+@media (min-width: 380px) {
+  .nav--mobile {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    position: fixed;
+    border-bottom: 1px solid var(--primary-border-color);
+    padding: 1rem 6rem;
+    background: var(--primary-bg-color);
+  }
+
+  .nav--mobile {
+    display: none; /* Ocultar nav--mobile en pantallas más grandes */
+  }
+
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    min-width: 30vw;
+  }
+
+  .header__toggle {
+    visibility: visible; /* Ocultar el toggle en pantallas más grandes */
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  main,
+  .projects,
+  .about {
+    padding: 2rem;
+  }
+
+  .contact {
+    padding: 6rem;
+  }
+
+  .contact p {
+    width: 80%;
+  }
+
+  .main__content1 {
+    align-items: flex-start;
+  }
+
+  .tecnologias {
+    padding: 6.25rem 6rem 2rem;
+    margin-top: -6rem;
+  }
+
+  footer {
+    margin: 0;
+  }
+
+  footer p {
+    margin: 0;
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .projects__card {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .projects__card.card--reverse {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .card__cover {
+    width: 55%;
+  }
+
+  .about {
+    gap: 5rem;
+  }
+
+  .about__content1,
+  .about__content2 {
+    display: grid;
+    grid-template-columns: 34% 60%;
+    gap: 4rem;
+  }
+
+  .about__description h2 {
+    text-align: left;
+  }
+
+  .description__buttons {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  main {
+    padding: 12rem 6rem 2rem;
+  }
+
+  .main__content1 .btn {
+    width: auto;
+  }
+
+  .tecnologias {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10rem 6rem 4rem;
+  }
+
+  .tecnologias h2 {
+    font-size: 3rem;
+    width: 55%;
+  }
+
+  .tecnologias__list {
+    gap: 1rem;
+  }
+
+  .tecnologias__item {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .tecnologias__logo {
+    height: 3rem;
+  }
+
+  p,
+  span,
+  li {
+    font-size: 1.15rem;
+  }
+
+  .card__buttons .btn,
+  .description__buttons .btn {
+    width: auto;
+  }
+}
+
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 6.25rem;
+  }
+
+  h2 {
+    font-size: 4.5rem;
+  }
+
+  h3 {
+    font-size: 3.25rem;
+  }
+
+  .header {
+    padding: 1rem 15rem;
+  }
+
+  main {
+    padding: 12rem 15rem 2rem;
+  }
+
+  .tecnologias,
+  .projects,
+  .about {
+    padding: 10rem 15rem 4rem;
+  }
+}

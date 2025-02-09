@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección de Comentarios</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="comments.css">
+</head>
+<body>
+    <section id="Comments">
+        <h2>comentarios</h2>
+        <form id="commentForm">
+            <div class="form-group">
+                <label for="username">Nombre</label>
+                <input type="text" id="name" title="Nombre" placeholder="Ingrese su nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="comment">Comentario</label>
+                <textarea id="comment" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Calificación</label>
+                <div class="rating">
+                    <span data-value="1">☆</span>
+                    <span data-value="2">☆</span>
+                    <span data-value="3">☆</span>
+                    <span data-value="4">☆</span>
+                    <span data-value="5">☆</span>
+                </div>
+            </div>
+            <button type="submit" class="btn1 btn--primary2">Enviar Comentario</button>
+        </form>
+
+        <h2>Comentarios realizados</h2>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <!-- Los comentarios se insertarán aquí dinámicamente -->
+            </div>
+            <button class="carousel-control prev">&#10094;</button>
+            <button class="carousel-control next">&#10095;</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
