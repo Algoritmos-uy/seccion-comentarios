@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sección de Comentarios</title>
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="comments.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/comments.css">
 </head>
+
 <body>
     <section id="Comments">
         <h2>comentarios</h2>
@@ -17,10 +19,16 @@
             </div>
             <div class="form-group">
                 <label for="comment">Comentario</label>
-                <textarea id="comment" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
+                <textarea id="comment" rows="4" required placeholder="Ingrese su comentario"></textarea>
+
                 <label>Calificación</label>
+                <!--Estrellas agregadas con entidades HTML-->
+
+                <!--div class="rating">
+                    <span data-value="1">&#9733; &#9734; &#10026; &#10031;</span>
+                <div-->
+
+                <!--Estrellas agregadas con unicode-->
                 <div class="rating">
                     <span data-value="1">☆</span>
                     <span data-value="2">☆</span>
@@ -28,8 +36,8 @@
                     <span data-value="4">☆</span>
                     <span data-value="5">☆</span>
                 </div>
-            </div>
-            <button type="submit" class="btn1 btn--primary2">Enviar Comentario</button>
+                </div->
+                <button type="submit" class="btn1 btn--primary2">Enviar Comentario</button>
         </form>
 
         <h2>Comentarios realizados</h2>
@@ -42,6 +50,7 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
